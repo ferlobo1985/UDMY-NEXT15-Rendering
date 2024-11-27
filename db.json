@@ -47,6 +47,24 @@
       "position": "Center",
       "age": "57",
       "id": 8
+    },
+    {
+      "fullname": "Jalen Brunson",
+      "position": "Best player",
+      "age": "28",
+      "id": 9
+    },
+    {
+      "fullname": "Jalen Brunson",
+      "position": "Best player",
+      "age": "28",
+      "id": 10
+    },
+    {
+      "fullname": "Rob Schneider",
+      "position": "Manager",
+      "age": "34",
+      "id": 11
     }
   ]
 }
