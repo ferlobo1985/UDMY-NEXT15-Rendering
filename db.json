@@ -35,6 +35,18 @@
       "position": "Singer",
       "age": "18",
       "id": 6
+    },
+    {
+      "fullname": "Mark Jackson",
+      "position": "Headcoach",
+      "age": "44",
+      "id": 7
+    },
+    {
+      "fullname": "Mitchell Robinson",
+      "position": "Center",
+      "age": "57",
+      "id": 8
     }
   ]
 }

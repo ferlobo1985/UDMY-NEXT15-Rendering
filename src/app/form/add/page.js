@@ -1,21 +1,12 @@
-import axios from "axios";
+import { addEmployee } from "@/helpers/actions";
 
 export default function AddPage() {
-
-    async function onSubmit(formdata){
-      'use server'
-      await axios.post('http://localhost:3004/employees',{
-        fullname: formdata.get('fullname'),
-        position: formdata.get('position'),
-        age: formdata.get('age'),
-      })
-    }
 
     return (
      <>
       <h1>Add employee</h1>
       <div>
-        <form action={onSubmit}>
+        <form action={addEmployee}>
           <input type="text" className="form-control mb-3" id="fullname"
             placeholder="Enter the fullname" name="fullname"
           />
