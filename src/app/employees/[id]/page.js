@@ -1,15 +1,22 @@
-import axios from 'axios'
+async function getEmployee(ID){
+  const res = await fetch(`http://localhost:3004/employees/${ID}`);
+  if(!res.ok){
+    throw new Error('Could not find employee')
+  }
+  return res.json();
+}
+
 
 export default async function EmployeeByID({params}) {
   const ID = (await params).id;
-  const employee = await axios.get(`http://localhost:3004/employees/${ID}`);
+  const employee = await getEmployee(ID);
 
   return (
     <>
-      <h1>{employee.data.fullname}</h1>
+      <h1>{employee.fullname}</h1>
       <div>
-        <h4>Position:{employee.data.position}</h4>
-        <h4>Age:{employee.data.age}</h4>
+        <h4>Position:{employee.position}</h4>
+        <h4>Age:{employee.age}</h4>
       </div>
     </>
   );
