@@ -1,7 +1,10 @@
+import { notFound } from "next/navigation";
+
 async function getEmployee(ID){
   const res = await fetch(`http://localhost:3004/employees/${ID}`);
   if(!res.ok){
-    throw new Error('Could not find employee')
+    // throw new Error('Could not find employee')
+    return notFound()
   }
   return res.json();
 }
