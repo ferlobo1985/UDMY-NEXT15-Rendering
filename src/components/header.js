@@ -12,6 +12,9 @@ export default function Header(){
             <Link href="/form/add" className='me-3 py-2 link-body-emphasis text-decoration-none'>
                 Add Employee
             </Link>
+            <Link href="/streaming" className='me-3 py-2 link-body-emphasis text-decoration-none'>
+               Streaming
+            </Link>
         </nav>
     </div>
     )
