@@ -1,9 +1,22 @@
 'use client'
 import { useFormik } from "formik"
 import * as Yup from "yup";
-
+import { editEmployee } from "@/helpers/actions";
+import { useState, useTransition } from "react";
 
 export default function EditForm({employee}){
+    const [isPending,startTransition] = useTransition();
+    const [error,setError] = useState(null);
+
+    const handleSubmit = async(values) => {
+       // const res = await editEmployee(values);
+       startTransition(async()=>{
+        const {error} = await editEmployee(values);  
+        if(error){
+            setError(error);
+        }
+       });
+    }
 
     const formik = useFormik({
         enableReinitialize: true,
@@ -20,7 +33,7 @@ export default function EditForm({employee}){
         }),
         onSubmit:(values)=>{
             /// edit employee
-            console.log(values)
+            handleSubmit(values)
         }
     })
 
@@ -75,6 +88,11 @@ export default function EditForm({employee}){
                     Edit employee
                 </button>
 
+                { error ? (
+                    <div className="alert alert-danger"  role="alert">
+                        {error}
+                    </div>
+                ):null}
 
            </form>
         </>
