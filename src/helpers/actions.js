@@ -22,7 +22,7 @@ export async function addEmployee(prevState,formData){
             age: formData.get('age'),
         });
 
-        revalidatePath('/');
+        // revalidatePath('/');
         return { success:true, message:'Name added'}
     } catch(e){
         return { success:false, message:e.message}
@@ -55,8 +55,8 @@ export async function editEmployee(formData){
     } catch(error){
         return { error:error}
     }
-    revalidatePath(`/employees/${formData.id}`);
-    revalidatePath('/');
+    // revalidatePath(`/employees/${formData.id}`);
+   // revalidatePath('/');
     redirect('/');
 }
 
@@ -65,6 +65,6 @@ export async function deleteEmployee(ID) {
     await fetch(`http://localhost:3004/employees/${ID}`,{
         method:'DELETE'
     });
-    revalidatePath('/');
+    // revalidatePath('/');
     redirect('/')
 }
