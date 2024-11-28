@@ -15,6 +15,9 @@ export default function Header(){
             <Link href="/streaming" className='me-3 py-2 link-body-emphasis text-decoration-none'>
                Streaming
             </Link>
+            <Link href="/about" className='me-3 py-2 link-body-emphasis text-decoration-none'>
+               About
+            </Link>
         </nav>
     </div>
     )

@@ -35,6 +35,12 @@
       "position": "Singer",
       "age": "18",
       "id": 6
+    },
+    {
+      "fullname": "Lorne Michaels",
+      "position": "Dev",
+      "age": "65",
+      "id": 7
     }
   ]
 }
