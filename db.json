@@ -41,6 +41,18 @@
       "position": "Dev",
       "age": "65",
       "id": 7
+    },
+    {
+      "fullname": "Tim Cook",
+      "position": "Dev",
+      "age": "45",
+      "id": 8
+    },
+    {
+      "fullname": "Miles Bronson",
+      "position": "Manager",
+      "age": "23",
+      "id": 9
     }
   ]
 }

@@ -1,6 +1,9 @@
 import Link from "next/link";
 import Counter from "@/components/counter";
 
+// export const dynamic = 'force-dynamic';
+// export const revalidate = 5;
+
 async function getEmployees(){
   const res = await fetch(`http://localhost:3004/employees`);
   if(!res.ok){
