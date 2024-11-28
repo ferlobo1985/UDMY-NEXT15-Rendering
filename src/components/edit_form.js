@@ -24,8 +24,6 @@ export default function EditForm({employee}){
         }
     })
 
-
-
     return(
         <>
            <form onSubmit={formik.handleSubmit}>
