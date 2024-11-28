@@ -55,3 +55,11 @@ export async function editEmployee(formData){
     }
     redirect('/');
 }
+
+
+export async function deleteEmployee(ID) {
+    await fetch(`http://localhost:3004/employees/${ID}`,{
+        method:'DELETE'
+    });
+    redirect('/')
+}
