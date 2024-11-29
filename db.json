@@ -59,12 +59,6 @@
       "position": "Awesome",
       "age": "60",
       "id": 11
-    },
-    {
-      "fullname": "Michel Jackson",
-      "position": "Singer",
-      "age": 50,
-      "id": 12
     }
   ]
 }
