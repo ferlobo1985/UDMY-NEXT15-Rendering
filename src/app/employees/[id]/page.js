@@ -40,3 +40,14 @@ export default async function EmployeeByID({params}) {
   );
 }
   
+
+export async function generateStaticParams() {
+  const employees = await fetch(`http://localhost:3004/employees`)
+  .then((res)=> res.json())
+
+  return employees.map(employee => {
+    return {
+      id:employee.id.toString()
+    }
+  })
+}
